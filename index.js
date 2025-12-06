@@ -12,7 +12,7 @@ document.getElementById('changeTextBtn').ondblclick = function () {
     document.getElementById('name').style.backgroundColor = 'white';
 };
 //Variables
-let count=0;
+let count = 0;
 document.getElementById('count').innerText = count;
 document.getElementById('countBtn').onclick = function () {
     count++;
@@ -27,37 +27,56 @@ document.getElementById('reset').onclick = function () {
     document.getElementById('count').innerText = count;
 }
 //Let and Const
-console.log(typeof(count));
+console.log(typeof (count));
 const PI = 3.14;
 console.log(PI);
 let x = "a";
 console.log(typeof x);
 //Objects
 let user = {
-    name:"John",
-    age:22,
-    city:"San Francisco"
+    name: "John",//Property
+    age: 22,
+    city: "San Francisco"
 }
+//Accessing properties
 console.log(user)
+console.log(user.name)
+console.log(user["age"])
+//Add Property
+user.role = 'admin'
+console.log(user)
+//Delete Property
+delete user.role
+console.log(user)
+//update if exists
+let exists = 'role' in user
+let isName=user.hasOwnProperty("name")
 //Arrays
-let fruits = ['Apple','Orange','Banana']
+let fruits = ['Apple', 'Orange', 'Banana']
 console.log(fruits);
 //Push-add to last elements
 fruits.push('Guava');
-console.log("Push:"+fruits,fruits.length);
+console.log("Push:" + fruits, fruits.length);
 //Pop- removes the last Element
 fruits.pop();
-console.log(fruits,fruits.length);
+console.log(fruits, fruits.length);
 //Shift removes first Element
 fruits.shift();
-console.log(fruits,fruits.length);
+console.log(fruits, fruits.length);
 //unshift - add element to the begining
 fruits.unshift('apple');
-console.log(fruits,fruits.length);
+console.log(fruits, fruits.length);
 //Slice() 
-console.log(fruits.slice(0,2))
+console.log(fruits.slice(0, 2))
 //Splice
 console.log(fruits)
-let newFriuts = fruits.splice(0,2,"Cherry")
+let newFriuts = fruits.splice(0, 2, "Cherry")
 console.log(newFriuts)
 console.log(fruits)
+//Type conversion
+let a = '5' - 1;
+console.log(a);
+console.log(typeof a);
+let b = 5 + '1';
+console.log(b)
+console.log(typeof x)
