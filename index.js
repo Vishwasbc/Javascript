@@ -50,7 +50,7 @@ delete user.role
 console.log(user)
 //update if exists
 let exists = 'role' in user
-let isName=user.hasOwnProperty("name")
+let isName = user.hasOwnProperty("name")
 //Arrays
 let fruits = ['Apple', 'Orange', 'Banana']
 console.log(fruits);
@@ -80,3 +80,37 @@ console.log(typeof a);
 let b = 5 + '1';
 console.log(b)
 console.log(typeof x)
+/* template literals
+syntax `${expression}`
+ */
+let name = 'Viswhas'
+console.log(`Hello ${name}`);
+//function
+function greet(name) {
+    console.log(`Hello ${name}!!,Welcome`);
+}
+greet('Vishwas')
+//default parameters
+function greetPerson(name = 'Guest') {
+    console.log(`Hello ${name}!!,Welcome`);
+}
+greetPerson()
+//Rest Parameters
+function calculate(...numbers) {
+    let sum = 0
+    for (let number of numbers) {
+        sum += number
+    }
+    console.log(sum);
+}
+//returning 
+function calculateReturn(...numbers) {
+    let sum = 0
+    for (let number of numbers) {
+        sum += number
+    }
+    return sum;
+}
+//Arrow Function
+let greetPer = () => console.log("Hello This as an arrow");
+greetPer();
