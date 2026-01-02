@@ -114,3 +114,40 @@ function calculateReturn(...numbers) {
 //Arrow Function
 let greetPer = () => console.log("Hello This as an arrow");
 greetPer();
+//Callbacks
+function fetchData(callback) {
+    setTimeout(() => {
+        let data = 'Sample Data'
+        callback(data);
+    }, 5000);
+}
+function processData(data) {
+    console.log('With callback:', data);
+
+}
+fetchData(processData)
+
+function fetchDataAnno(callback) {
+    setTimeout(() => {
+        let data = 'Sample Data'
+        callback(data);
+    },6000);
+}
+fetchDataAnno((data) => {
+    console.log('With Anno:',data)
+})
+
+//With Promises
+function fetchDataPromise(callback) {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            let data = 'Sample Data'
+            resolve(data);
+        }, 7000);
+    });
+}
+fetchDataPromise().then((data) => {
+    console.log("Data with Promise", data);
+}).catch((error) => {
+    console.error(error);
+})
