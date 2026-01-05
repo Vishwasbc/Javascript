@@ -151,3 +151,21 @@ fetchDataPromise().then((data) => {
 }).catch((error) => {
     console.error(error);
 })
+
+//Asyc and Await
+async function fetchAsyc(){
+    let data = await getData();//getData is a dummy function
+    console.log(data);
+}
+
+//try adn catch
+try{
+    a();
+}catch(error){
+    console.log(error.message)
+}finally{
+    console.log("Hi,Im in finally");
+}
+
+
+
